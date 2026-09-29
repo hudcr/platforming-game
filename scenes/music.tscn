@@ -1,0 +1,8 @@
+[gd_scene format=3]
+
+[ext_resource type="AudioStream" uid="uid://cs6ewk272g28q" path="res://assets/music/MAIN_LEVEL_THEME.mp3" id="1_theme"]
+
+[node name="Music" type="AudioStreamPlayer"]
+stream = ExtResource("1_theme")
+
+[connection signal="finished" from="." to="." method="play"]
