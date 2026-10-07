@@ -15,11 +15,9 @@ var finished := false
 var fireball_scene = preload("res://scenes/fireball.tscn")
 var fall_speed = 0.0
 
-
 func _ready():
 	if not Music.playing:
 		Music.play()
-
 
 func _physics_process(delta: float) -> void:
 	if finished and timer.is_stopped():

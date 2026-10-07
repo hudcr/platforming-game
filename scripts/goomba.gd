@@ -4,11 +4,9 @@ var speed = 80
 var jump_timer = 0
 var player
 
-
 func _ready():
 	player = get_parent().get_node("Player")
 	add_collision_exception_with(player)
-
 
 func _physics_process(delta):
 	velocity += get_gravity() * delta
@@ -26,7 +24,6 @@ func _physics_process(delta):
 		jump_timer = 0
 
 	move_and_slide()
-
 
 func _on_hitbox_body_entered(body):
 	if body.name == "Player":
