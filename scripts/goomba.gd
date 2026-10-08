@@ -4,8 +4,10 @@ var speed = 80
 var jump_timer = 0
 var player
 
+@onready var hitbox: Area2D = $Hitbox
+
 func _ready():
-	player = get_parent().get_node("Player")
+	player = get_tree().get_first_node_in_group("player")
 	add_collision_exception_with(player)
 
 func _physics_process(delta):
@@ -25,10 +27,12 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-func _on_hitbox_body_entered(body):
-	if body.name == "Player":
-		if body.fall_speed > 100 or body.global_position.y < global_position.y - 60:
-			body.velocity.y = -700
-			queue_free()
-		else:
-			body.die()
+	if hitbox.overlaps_body(player):
+		_touch_player()
+
+func _touch_player():
+	if player.fall_speed > 100 or player.global_position.y < global_position.y - 60:
+		player.velocity.y = -700
+		queue_free()
+	else:
+		player.take_damage()

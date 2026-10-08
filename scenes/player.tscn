@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_script"]
 [ext_resource type="Texture2D" uid="uid://pjkamy0b1q4s" path="res://assets/DinoPlayerSprite.png" id="2_dino"]
+[ext_resource type="PackedScene" path="res://scenes/hud.tscn" id="3_hud"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
 size = Vector2(72, 108)
@@ -137,7 +138,7 @@ _data = {
 &"walk": SubResource("Animation_walk")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 script = ExtResource("1_script")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -174,3 +175,5 @@ libraries = {
 &"": SubResource("AnimationLibrary_dino")
 }
 autoplay = &"idle"
+
+[node name="HUD" parent="." instance=ExtResource("3_hud")]

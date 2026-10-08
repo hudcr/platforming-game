@@ -1,0 +1,59 @@
+[gd_resource type="TileSet" format=3 uid="uid://md2yofvey3yd"]
+
+[ext_resource type="Texture2D" path="res://assets/spikedeadly.png" id="1_spike"]
+[ext_resource type="Texture2D" path="res://assets/coinstar.png" id="2_coin"]
+[ext_resource type="Texture2D" path="res://assets/heartsprite.png" id="3_heart"]
+[ext_resource type="Texture2D" path="res://assets/powershroomwhite.png" id="4_shroom"]
+[ext_resource type="Texture2D" path="res://assets/CHECKPOINT FLAG.png" id="5_flag"]
+[ext_resource type="Texture2D" path="res://assets/enemy_sprites.png" id="6_goomba"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_spike"]
+resource_name = "Spike"
+texture = ExtResource("1_spike")
+0:0/0 = 0
+0:0/0/custom_data_0 = "res://scenes/spike.tscn"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_coin"]
+resource_name = "Coin"
+texture = ExtResource("2_coin")
+texture_region_size = Vector2i(18, 18)
+0:0/0 = 0
+0:0/0/custom_data_0 = "res://scenes/coin.tscn"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_heart"]
+resource_name = "Heart"
+texture = ExtResource("3_heart")
+texture_region_size = Vector2i(16, 14)
+0:0/0 = 0
+0:0/0/custom_data_0 = "res://scenes/heart.tscn"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_shroom"]
+resource_name = "Power Mushroom"
+texture = ExtResource("4_shroom")
+texture_region_size = Vector2i(20, 18)
+0:0/0 = 0
+0:0/0/custom_data_0 = "res://scenes/power_mushroom.tscn"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_flag"]
+resource_name = "Checkpoint"
+texture = ExtResource("5_flag")
+texture_region_size = Vector2i(15, 39)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(0, 12)
+0:0/0/custom_data_0 = "res://scenes/checkpoint.tscn"
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_goomba"]
+resource_name = "Goomba"
+texture = ExtResource("6_goomba")
+0:1/0 = 0
+0:1/0/custom_data_0 = "res://scenes/goomba.tscn"
+
+[resource]
+custom_data_layer_0/name = "scene"
+custom_data_layer_0/type = 4
+sources/0 = SubResource("TileSetAtlasSource_spike")
+sources/1 = SubResource("TileSetAtlasSource_coin")
+sources/2 = SubResource("TileSetAtlasSource_heart")
+sources/3 = SubResource("TileSetAtlasSource_shroom")
+sources/4 = SubResource("TileSetAtlasSource_flag")
+sources/5 = SubResource("TileSetAtlasSource_goomba")
