@@ -5,8 +5,8 @@
 [ext_resource type="TileSet" uid="uid://bey6exp0j3wm1" path="res://assets/mario_tileset.tres" id="3_mario"]
 [ext_resource type="TileSet" uid="uid://xqfs8vt040sq" path="res://assets/snow_tileset.tres" id="4_snow"]
 [ext_resource type="PackedScene" path="res://scenes/goomba.tscn" id="5_ppgk2"]
-[ext_resource type="TileSet" path="res://assets/items_tileset.tres" id="6_items"]
-[ext_resource type="Script" path="res://scripts/items_layer.gd" id="7_items_layer"]
+[ext_resource type="TileSet" uid="uid://md2yofvey3yd" path="res://assets/items_tileset.tres" id="6_items"]
+[ext_resource type="Script" uid="uid://des038ccew7yo" path="res://scripts/items_layer.gd" id="7_items_layer"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_door"]
 size = Vector2(63, 106)
