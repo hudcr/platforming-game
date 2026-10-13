@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" uid="uid://buwkd4n0jvqvu" path="res://scripts/GodotCredits.gd" id="1_jet1m"]
 
-[node name="GodotCredits" type="Node2D"]
+[node name="GodotCredits" type="Node2D" unique_id=1606736541]
 script = ExtResource("1_jet1m")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1400238381]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,7 +16,7 @@ grow_vertical = 2
 scale = Vector2(28.88, 1)
 color = Color(0, 0, 0, 1)
 
-[node name="CreditsContainer" type="Control" parent="."]
+[node name="CreditsContainer" type="Control" parent="." unique_id=980695891]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Line" type="Label" parent="CreditsContainer"]
+[node name="Line" type="Label" parent="CreditsContainer" unique_id=1705180941]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -32,6 +32,6 @@ offset_right = 1152.0
 offset_bottom = 696.0
 grow_horizontal = 2
 size_flags_horizontal = 3
-theme_override_font_sizes/font_size = 50
-text = ""
+theme_override_font_sizes/font_size = 24
 horizontal_alignment = 1
+autowrap_mode = 3

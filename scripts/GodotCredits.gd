@@ -2,7 +2,7 @@ extends Node2D
 
 const section_time := 2.0
 const line_time := 0.3
-const base_speed := 100
+const base_speed := 40
 const speed_up_multiplier := 10.0
 const title_color := Color.RED
 
@@ -22,25 +22,15 @@ var lines := []
 
 var credits = [
 	[
-		"Made by Hudson Craig"
+		"Johnny Jurassic made it home, powering through the sudden ice-age."
 	],[
-		"Made by Hudson Craig"
+		"For christmas, he gifted his children..."
 	],[
-		"Made by Hudson Craig"
+		"%d coins, split evenly, except for his step-dinosaur, who received 3." % GameState.coins
 	],[
-		"Made by Hudson Craig"
+		"Coming soon:"
 	],[
-		"Made by Hudson Craig"
-	],[
-		"Made by Hudson Craig"
-	],[
-		"Made by Hudson Craig"
-	],[
-		"Made by Hudson Craig"
-	],[
-		"Made by Hudson Craig"
-	],[
-		"Made by Hudson Craig"
+		"Johnny Jurassic learns to love all his kin equally."
 	]
 ]
 
@@ -70,7 +60,7 @@ func _process(delta):
 	
 	if lines.size() > 0:
 		for l in lines:
-			l.position.y += scroll_speed
+			l.position.y -= scroll_speed
 			if l.position.y < -l.get_line_height():
 				lines.erase(l)
 				l.queue_free()
@@ -94,6 +84,7 @@ func add_line():
 	if curr_line == 0:
 		new_line.set("theme_override_colors/font_color",title_color)
 	$CreditsContainer.add_child(new_line)
+	new_line.position.y = get_viewport_rect().size.y
 
 	if section.size() > 0:
 		curr_line += 1

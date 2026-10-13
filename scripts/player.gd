@@ -127,10 +127,10 @@ func apply_boost() -> void:
 	boost_time_left = boost_duration
 
 
-func take_damage() -> void:
+func take_damage(amount: int = 1) -> void:
 	if dead or finished or invincible_time_left > 0.0:
 		return
-	set_health(health - 1)
+	set_health(health - amount)
 	if health <= 0:
 		die()
 		return
